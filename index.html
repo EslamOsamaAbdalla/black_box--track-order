@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>track order</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" 
+    integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <aside>
+        <div id="logo">
+            <a href="#">black_box</a>
+        </div>
+        <div id="aside-container">
+            <div id="user-info">
+                <img src="img/avatar.png" alt="user avatar">
+                <div>
+                    <h4>user name</h4>
+                    <h6>new member</h6>
+                </div>
+            </div>
+            <ul><a href="#"><i class="fas fa-tachometer-alt"></i><span class="list-name">dashboard</span></a></ul>
+            <span>controls</span>
+            <ul><a href="#"><i class="fas fa-users"></i><span class="list-name">users</span> <span class="list-arrow"><i class="fas fa-sort-down"></i></span></a>
+                    <li><a href="#">manage users</a></li>
+                    <li><a href="#">manage roles</a></li>
+                    <li><a href="#"><i class="fas fa-user-tie"></i> seller</a></li>
+            </ul>
+            <ul><a href="#"><i class="fas fa-folder-open"></i><span class="list-name">area</span> <span class="list-arrow"><i class="fas fa-sort-down"></i></span></a>
+                    <li><a href="#">manage areas</a></li>
+                    <li><a href="#">manage branches</a></li>
+                    <li><a href="#">manage zones</a></li>
+            </ul>
+            <span>interface</span>
+            <ul><a href="#"><i class="fas fa-chart-area"></i><span class="list-name">tasks</span> <span class="list-arrow"><i class="fas fa-sort-down"></i></span></a>
+                    <li><a href="#">manage tasks</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i>locations</a></li>
+            </ul>
+            <ul><a href="#"><i class="fas fa-marker"></i><span class="list-name">accounting</span> <span class="list-arrow"><i class="fas fa-sort-down"></i></span></a>
+                    <li><a href="#"><i class="fas fa-money-check "></i> receipts</a></li>
+                    <li><a href="#"><i class="fas fa-images"></i> financiats</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> statics</a></li>
+            </ul>
+            <ul><a href="#"><i class="fas fa-chart-area"></i><span class="list-name">orders</span> <span class="list-arrow"><i class="fas fa-sort-down"></i></span></a>
+                    <li><a href="#"><i class="fas fa-box-open"></i> manage orders</a></li>
+                    <li><a href="#"><i class="fas fa-box"></i> manage packing</a></li>
+            </ul>
+            <ul><a href="#"><i class="fas fa-tag"></i><span class="list-name">manage plans</span></a></ul>
+            <ul><a href="#"><i class="fas fa-question-circle"></i><span class="list-name">help</span></a></ul>
+            <ul><a href="#"><i class="fas fa-cogs"></i><span class="list-name">setting</span></a></ul>
+            <ul><a href="#"><i class="fas fa-trash-restore"></i><span class="list-name">names.trash</span></a></ul>
+        </div>
+    </aside>
+    <main>
+        <nav>
+            <button><i class="fas fa-bars"></i></button>
+            <form>
+                <input type="text" placeholder="search">
+            </form>
+            <div id="nav-item">
+                <a href="#">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-bell"></i>
+                </a>
+                <div id="nav-language">
+                    <a href="#">en</a>
+                    <a href="#">ar</a>
+                </div>
+            </div>
+        </nav>
+        <section id="main-container">
+            <div id="main-child">
+                <h2>track order</h2>
+                <form>
+                    <label for="track-id">enter order track id</label>
+                    <input type="text" id="track-id" placeholder="Track Id">
+                    <button>track order</button>
+                </form>
+                <div id="order-state">
+                    <span><i class="fas fa-box"></i>pending</span>
+                    <span><i class="fas fa-truck"></i>on way</span>
+                    <span><i class="fas fa-box-open"></i>deleverid</span>
+                    <meter id="order-meter" value=".75"></meter>
+                </div>
+            </div>
+            <footer>copyright © Feedback 2021</footer>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

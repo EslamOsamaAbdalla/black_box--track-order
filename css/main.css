@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+:root {
+  --main-color: #12121d;
+  --secound-color: #383844;
+  --font-color: #eeeeee;
+  --font-color-two: #8a8686;
+}
+/** aside **/
+aside {
+  position: fixed;
+  height: 100vh;
+  width: 15%;
+  background-color: var(--main-color);
+}
+#logo {
+  border-bottom: 1px solid var(--font-color-two);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo a {
+  color: var(--font-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+#aside-container {
+  overflow: auto;
+  height: 90%;
+}
+#aside-container::-webkit-scrollbar {
+  display: none;
+}
+#user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+#user-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--secound-color);
+  padding: 5px;
+}
+#user-info > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--font-color);
+  user-select: none;
+}
+#user-info > div h6 {
+  color: var(--font-color-two);
+}
+#aside-container ul {
+  width: 100%;
+}
+#aside-container ul > a {
+  justify-content: flex-start;
+  align-items: center;
+}
+#aside-container ul > a > .list-arrow {
+  margin-left: auto;
+}
+#aside-container ul a {
+  display: flex;
+  text-decoration: none;
+  color: var(--font-color);
+  padding: 5px 15px;
+  margin: 5px 0;
+  transition: all 0.5s;
+}
+#aside-container ul a:hover {
+  background-color: var(--secound-color);
+}
+#aside-container ul li {
+  list-style: none;
+  width: 80%;
+  margin: auto;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+#aside-container ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#aside-container ul a i {
+  margin-right: 10px;
+}
+#aside-container > span {
+  color: var(--font-color-two);
+  margin-left: 5px;
+  user-select: none;
+  font-size: 13px;
+}
+@media screen and (max-width: 867px) {
+  aside {
+    width: 30%;
+  }
+  #aside-container ul a {
+    padding: 0;
+  }
+}
+/** aside **/
+/** main **/
+main {
+  width: 85%;
+  margin-left: auto;
+}
+/** nav **/
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: var(--secound-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+nav > button {
+  background-color: var(--main-color);
+  color: var(--font-color);
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+nav form {
+  width: 80%;
+  position: relative;
+}
+nav form input {
+  width: 100%;
+  padding-left: 30px;
+  border-radius: 5px;
+}
+nav form::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f002";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  color: var(--main-color);
+}
+nav #nav-item {
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+nav #nav-item a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+nav #nav-item #nav-language {
+  display: flex;
+  flex-direction: column;
+}
+nav #nav-item #nav-language a {
+  display: block;
+}
+@media screen and (max-width: 867px) {
+  nav {
+    padding: 0;
+  }
+  nav form {
+    width: 50%;
+  }
+  nav #nav-item {
+    width: 30%;
+  }
+}
+/** nav **/
+/** main container **/
+#main-container {
+  min-height: 90.5vh;
+  width: 100%;
+  position: relative;
+}
+/** main child **/
+#main-child {
+  margin-bottom: 60px;
+}
+#main-child h2 {
+  text-align: center;
+  text-transform: capitalize;
+}
+/** track order page **/
+#main-child > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main-child > form label {
+  align-self: flex-start;
+  margin-left: 10%;
+  text-transform: capitalize;
+}
+#main-child > form input {
+  width: 80%;
+  border-radius: 5px;
+  padding: 2px 15px;
+}
+#main-child > form button {
+  background-color: var(--main-color);
+  color: var(--font-color);
+  padding: 5px;
+  border-radius: 5px;
+  border: 0;
+  margin-top: 20px;
+  width: 100px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#main-child > form button:hover {
+  background-color: var(--secound-color);
+}
+#order-state {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+  position: relative;
+}
+#order-state span {
+  background-color: var(--secound-color);
+  color: var(--font-color);
+  text-transform: uppercase;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+#order-state span:first-child {
+  background-color: green;
+}
+#order-state span:nth-child(2) {
+  background-color: green;
+}
+#order-meter {
+  position: absolute;
+  width: 70%;
+  height: 40px;
+}
+/** track order page **/
+/** main child **/
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secound-color);
+  color: var(--font-color);
+}
+/** main container **/
+@media screen and (max-width: 867px) {
+  main {
+    width: 70%;
+  }
+}
+/** main **/
